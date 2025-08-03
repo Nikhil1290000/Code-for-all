@@ -1,0 +1,23 @@
+// pages/index.tsx and other pages stay the same // Below is implementation of user auth pages
+
+// pages/auth/signin.tsx import React from "react"; import { Input } from "@/components/ui/input"; import { Button } from "@/components/ui/button"; import Link from "next/link";
+
+export default function SignIn() { return ( <main className="min-h-screen flex items-center justify-center bg-slate-50"> <div className="w-full max-w-md bg-white p-8 rounded-2xl shadow-xl"> <h1 className="text-2xl font-bold mb-6 text-center">🔐 Sign In</h1> <form className="space-y-4"> <Input type="email" placeholder="Email" required /> <Input type="password" placeholder="Password" required /> <Button type="submit" className="w-full">Sign In</Button> </form> <p className="text-sm text-center mt-4 text-gray-600"> Don't have an account? <Link href="/auth/signup" className="text-blue-600">Sign Up</Link> </p> </div> </main> ); }
+
+
+
+// Optional: Add auth links to homepage or navigation when implementing layout
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CodeForAll</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col justify-center items-center">
+  <h1 class="text-4xl font-bold text-blue-600">Welcome to CodeForAll</h1>
+  <p class="mt-4 text-gray-700 text-lg">Learn coding from your mobile 📱</p>
+</body>
+</html>
